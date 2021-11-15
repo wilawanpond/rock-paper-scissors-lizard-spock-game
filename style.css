@@ -21,6 +21,7 @@ header {
 header h2{
     font-family: 'Poppins', sans-serif;
     color: #1d161e;
+    font-size: 25px;
     text-align: center;
 }
 
@@ -71,59 +72,16 @@ header h2{
 .choices {
     margin: 30px 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .choice {
     display: inline-block;
     margin: 0 15px;
-
-}
-
-#action-message {
-    text-align: center;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-}
-
-/* Resize images */
-#lizard {
-    padding: 10px;
-    background: white;
-    height: 250px;
-    width: 200px;
-    border-radius: 20px;
-    transition: 0.3s ease;
-}
-
-#rock {
-    padding: 10px;
-    background: white;
-    height: 250px;
-    width: 200px;
-    border-radius: 20px;
-    transition: 0.3s ease;
-}
-
-#paper {
-    padding: 10px;
-    background: white;
-    height: 250px;
-    width: 200px;
-    border-radius: 20px;
-    transition: 0.3s ease;
-}
-
-#spock {
-    padding: 10px;
-    background: white;
-    height: 250px;
-    width: 200px;
-    border-radius: 20px;
-    transition: 0.3s ease;
-}
-
-#scissor {
+    position: relative;
     padding: 10px;
     background: white;
     height: 250px;
@@ -137,28 +95,20 @@ header h2{
     height: auto;
 }
 
-/*Choice hover effect*/
-#lizard:hover {
+.choice:hover {
     cursor: pointer;
     background: #e8b12e;
 }
 
-#rock:hover {
+#lizard:hover,
+#spock:hover{
     cursor: pointer;
-    background: #e8b12e;
+    background: #365880 !important;
 }
 
-#paper:hover {
-    cursor: pointer;
-    background: #e8b12e;
-}
-
-#spock:hover {
-    cursor: pointer;
-    background: #365880;
-}
-
-#scissor:hover {
-    cursor: pointer;
-    background: #365880;
+#action-message {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
