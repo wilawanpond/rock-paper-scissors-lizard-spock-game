@@ -79,11 +79,11 @@ header h2{
 
 .choice {
     display: inline-block;
-    margin: 0 15px;
+    margin: 10px 15px;
     position: relative;
     padding: 3px 10px;
     background: white;
-    height: 250px;
+    height: 240px;
     width: 200px;
     border-radius: 20px;
     transition: 0.3s ease;
