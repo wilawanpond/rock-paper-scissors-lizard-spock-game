@@ -96,14 +96,9 @@ header h2{
 
 .choice:hover {
     cursor: pointer;
-    background: #e8b12e;
+    background: #365880;
 }
 
-#lizard:hover,
-#spock:hover{
-    cursor: pointer;
-    background: #365880 !important;
-}
 
 #action-message {
     text-align: center;
@@ -114,12 +109,12 @@ header h2{
 
 /*Animation when pick the choice*/
 .green-border {
-    outline: 4px solid #00A300;
+    outline: 4px solid #00D100;
     outline-offset: 0.25em;
     box-shadow: 0 0 10px #007500;
 }
 .red-border {
-    outline: 4px solid #DC143C;
+    outline: 4px solid #FF0000;
     outline-offset: 0.25em;
     box-shadow: 0 0 10px #B22222;
 }
