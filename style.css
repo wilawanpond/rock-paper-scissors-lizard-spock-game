@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Calistoga&display=swap');
 
 * {
     margin: 0;
@@ -104,7 +105,7 @@ header h2{
     text-align: center;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /*Animation when pick the choice*/
@@ -122,4 +123,19 @@ header h2{
     outline: 4px solid #525252;
     outline-offset: 0.25em;
     box-shadow: 0 0 10px #3B3B3B;
+}
+
+.contacts {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contacts ion-icon {
+    padding: 4px 5px;
+    color: #8A8AFF;
 }
