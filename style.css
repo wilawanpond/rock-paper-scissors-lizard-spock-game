@@ -111,3 +111,20 @@ header h2{
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
 }
+
+/*Animation when pick the choice*/
+.green-border {
+    outline: 4px solid #00A300;
+    outline-offset: 0.25em;
+    box-shadow: 0 0 10px #007500;
+}
+.red-border {
+    outline: 4px solid #DC143C;
+    outline-offset: 0.25em;
+    box-shadow: 0 0 10px #B22222;
+}
+.grey-border {
+    outline: 4px solid #525252;
+    outline-offset: 0.25em;
+    box-shadow: 0 0 10px #3B3B3B;
+}
