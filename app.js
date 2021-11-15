@@ -37,13 +37,14 @@ function win(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
+    const userChoice_div = document.getElementById(userChoice);
     result_div.innerHTML = convertToWord(userChoice)+(smallUserWord) + " beats " + convertToWord(computerChoice)+(smallCompWord) + ". You win!🎉";
     //add animation to the choice
-    document.getElementById(userChoice).classList.add('green-border');
+    userChoice_div.classList.add('green-border');
     //set time-out animation
     setTimeout(function(){
-        document.getElementById(userChoice).classList.remove('green-border')
-    }, 500);
+        userChoice_div.classList.remove('green-border')
+    }, 350);
 }
 
 //create lose function
@@ -55,7 +56,13 @@ function lose(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
+    const userChoice_div = document.getElementById(userChoice);
     result_div.innerHTML = convertToWord(userChoice)+(smallUserWord) + " loses to " + convertToWord(computerChoice)+(smallCompWord) + ". You lost😭";
+    userChoice_div.classList.add('red-border');
+    //set time-out animation
+    setTimeout(function(){
+        userChoice_div.classList.remove('red-border')
+    }, 350);
 }
 
 //create draw function
@@ -63,7 +70,13 @@ function draw(userChoice, computerChoice) {
     //show score on the score board
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
+    const userChoice_div = document.getElementById(userChoice);
     result_div.innerHTML = convertToWord(userChoice)+(smallUserWord) + " equals " + convertToWord(computerChoice)+(smallCompWord) + ". It's a draw🤔";
+    userChoice_div.classList.add('grey-border');
+    //set time-out animation
+    setTimeout(function(){
+        userChoice_div.classList.remove('grey-border')
+    }, 350);
 }
 
 //compare between computer choice and user choice using switch statement
