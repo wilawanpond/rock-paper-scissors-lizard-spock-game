@@ -72,10 +72,10 @@ function draw(userChoice, computerChoice) {
     const smallCompWord = "comp".fontsize(3).sub();
     const userChoice_div = document.getElementById(userChoice);
     result_div.innerHTML = convertToWord(userChoice)+(smallUserWord) + " equals " + convertToWord(computerChoice)+(smallCompWord) + ". It's a draw🤔";
-    userChoice_div.classList.add('grey-border');
+    userChoice_div.classList.add('gray-border');
     //set time-out animation
     setTimeout(function(){
-        userChoice_div.classList.remove('grey-border')
+        userChoice_div.classList.remove('gray-border')
     }, 350);
 }
 
