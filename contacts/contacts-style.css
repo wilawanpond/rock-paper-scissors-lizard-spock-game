@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Asap:wght@500&family=Merriweather&family=Noto+Sans:wght@700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(240deg, #270245, #871a85, #ff2941);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.contact-card {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: rgba(225, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border-top: 1px solid rgba(225, 255, 255, 0.5);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-card:hover {
+    transform: scale(1.2);
+}
+.contact-card::before {
+    content: '';
+    position: absolute;
+}
+.contact-card .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    gap: 20px;
+}
+.contact-card .content .myimg {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(225, 255, 255, 0.03);
+}
+.contact-card .content .myimg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact-card .content .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+.contact-card .content .details div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact-card .content .details h2{
+    font-weight: 500;
+    font-family: 'Noto Sans', sans-serif !important;
+}
+.contact-card .content .details ion-icon {
+    font-size: 1.4em;
+}
