@@ -1,1 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1d161e;
+    min-width: 100vh;
+    background-size: cover;
+}
+
+header {
+    padding: 20px;
+}
+
+header h2{
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    text-align: center;
+}
