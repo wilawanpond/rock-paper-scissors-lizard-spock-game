@@ -1,37 +1,69 @@
 //caching the DOM
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("comp-score");
 const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".result");
+const result_div = document.querySelector(".result p");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
-const scissor_div = document.getElementById("scissor");
+const scissor_div = document.getElementById("scissors");
 const lizard_div = document.getElementById("lizard");
 const spock_div = document.getElementById("spock");
 
 //addEventListener on each button
 //generate computer choice
 function getComputerChoice() {
-    const choices = ['rock', 'paper', 'scissor', 'lizard', 'spock'];
+    const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     const randomNumber = Math.floor(Math.random() * 5);
     return choices[randomNumber];
 }
 
+//create function that convert keyword to a readable word
+function convertToWord (keyWord) {
+    if (keyWord === "rock") return "Rock";
+    if (keyWord === "paper") return "Paper";
+    if (keyWord === "scissors") return "Scissors";
+    if (keyWord === "lizard") return "Lizard";
+    return "Spock";
+}
+
 //create win function
-function win() {
-    console.log("WIN");
+function win(userChoice, computerChoice) {
+    //when user wins
+    userScore++;
+    //show score on the score board
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_div.innerHTML = convertToWord(userChoice)+(smallUserWord) + " beats " + convertToWord(computerChoice)+(smallCompWord) + ". You win!🎉";
+    //add animation to the choice
+    document.getElementById(userChoice).classList.add('green-border');
+    //set time-out animation
+    setTimeout(function(){
+        document.getElementById(userChoice).classList.remove('green-border')
+    }, 500);
 }
 
 //create lose function
-function lose() {
-    console.log("lose");
+function lose(userChoice, computerChoice) {
+    //when computer wins
+    computerScore++;
+    //show score on the score board
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_div.innerHTML = convertToWord(userChoice)+(smallUserWord) + " loses to " + convertToWord(computerChoice)+(smallCompWord) + ". You lost😭";
 }
 
 //create draw function
-function draw() {
-    console.log("draw");
+function draw(userChoice, computerChoice) {
+    //show score on the score board
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_div.innerHTML = convertToWord(userChoice)+(smallUserWord) + " equals " + convertToWord(computerChoice)+(smallCompWord) + ". It's a draw🤔";
 }
 
 //compare between computer choice and user choice using switch statement
@@ -39,39 +71,39 @@ function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
         //case when user wins!
-        case "rockscissor":
+        case "rockscissors":
         case "rocklizard":
-        case "scissorpaper":
-        case "scissorlizard":
-        case "spockscissor":
+        case "scissorspaper":
+        case "scissorslizard":
+        case "spockscissors":
         case "spockrock":
         case "lizardspock":
         case "lizardpaper":
         case "paperspock":
         case "paperrock":
             //win function
-            win(); 
+            win(userChoice, computerChoice); 
             break;
         case "rockspock":
         case "rockpaper":
-        case "scissorspock":
-        case "scissorrock":
+        case "scissorsspock":
+        case "scissorsrock":
         case "spockpaper":
         case "spocklizard":
-        case "lizardscissor":
+        case "lizardscissors":
         case "lizardrock":
         case "paperlizard":
-        case "paperscissor":
+        case "paperscissors":
             //lose function
-            lose();
+            lose(userChoice, computerChoice);
             break;
         case "rockrock":
-        case "scissorscissor":
+        case "scissorsscissors":
         case "spockspock":
         case "lizardlizard":
         case "paperpaper":
             //draw function
-            draw();
+            draw(userChoice, computerChoice);
             break;
     }
 }
@@ -86,7 +118,7 @@ paper_div.addEventListener('click', function(){
 })
 
 scissor_div.addEventListener('click', function(){
-    game("scissor");
+    game("scissors");
 })
 
 lizard_div.addEventListener('click', function(){
