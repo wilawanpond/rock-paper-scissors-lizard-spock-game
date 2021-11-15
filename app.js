@@ -12,16 +12,42 @@ const lizard_div = document.getElementById("lizard");
 const spock_div = document.getElementById("spock");
 
 //addEventListener on each button
+//generate computer choice
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissor', 'lizard', 'spock'];
     const randomNumber = Math.floor(Math.random() * 5);
     return choices[randomNumber];
 }
 
-console.log(getComputerChoice());
-
+//compare between computer choice and user choice using switch statement
 function game(userChoice) {
-    
+    const computerChoice = getComputerChoice();
+    switch (userChoice + computerChoice) {
+        //case when user wins!
+        case "rockscissor":
+        case "rocklizard":
+        case "scissorpaper":
+        case "scissorlizard":
+        case "spockscissor":
+        case "spockrock":
+        case "lizardspock":
+        case "lizardpaper":
+        case "paperspock":
+        case "paperrock":
+            console.log("USER WINS!");
+            break;
+        case "rockspock":
+        case "rockpaper":
+        case "scissorspock":
+        case "scissorrock":
+        case "spockpaper":
+        case "spocklizard":
+        case "lizardscissor":
+        case "lizardrock":
+        case "paperlizard":
+        case "paperscissor":
+            console.log("USER LOSES!");
+    }
 }
 
 function main() {}
