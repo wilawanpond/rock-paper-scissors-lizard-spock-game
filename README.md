@@ -13,7 +13,7 @@ This project is inspired by the concept of rock, paper, scissors, lizard, and sp
 You can make some changes with the code and run it locally by cloning the project using the following command;
 ``
 git clone https://github.com/wilawanpond/rock-paper-scissors-lizard-spock-game.git
-``
+``  
 Or you can play it right away on the website!: [Rock, Paper, Scissors, Lizard, and Spock Game](https://rock-paper-scissors-lizard-spock-game-murex.vercel.app/)
 
 ## Contributing 💗
